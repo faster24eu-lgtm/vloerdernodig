@@ -30,8 +30,7 @@
   "name": "Vloerder Nodig",
   "alternateName": "Vloerder Nodig - tegelzetter",
   "url": "https://vloerdernodig.com/",
-  "telephone": "+32000000000",
-  "email": "info@vloerdernodig.com",
+  "telephone": "+3233756737",
   "description": "Vloerder en tegelzetter in Antwerpen en Vlaanderen: vloertegels leggen, wandtegels plaatsen, badkamers betegelen, grootformaat tegels en terrastegels.",
   "priceRange": "€€",
   "address": {
@@ -108,7 +107,6 @@ a{color:var(--brand)}
 .btn-main{background:var(--brand);color:#fff}
 .btn-main:hover{background:var(--brand-dark)}
 .btn-ghost{background:#fff;color:var(--ink);border:2px solid var(--ink)}
-.btn-wa{background:#25d366;color:#0b2a17}
 
 /* header */
 header.top{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line)}
@@ -134,6 +132,7 @@ nav.menu a{color:var(--ink);text-decoration:none;font-weight:600;font-size:15px}
 .checks li{padding-left:30px;position:relative}
 .checks li:before{content:"";position:absolute;left:0;top:4px;width:20px;height:20px;border-radius:50%;background:var(--ok) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3'%3E%3Cpath d='M5 12l5 5 9-10'/%3E%3C/svg%3E") center/14px no-repeat}
 .hero .ctas{display:flex;flex-wrap:wrap;gap:12px}
+.hero .btn-ghost{background:transparent;color:#fff;border-color:#fff}
 
 /* form card */
 .card{background:#fff;color:var(--ink);border-radius:var(--radius);padding:24px;box-shadow:0 20px 50px rgba(0,0,0,.25)}
@@ -145,6 +144,9 @@ input,select,textarea{width:100%;padding:12px;border:1px solid #cfc9c0;border-ra
 textarea{min-height:90px;resize:vertical}
 .small{font-size:13px;color:var(--muted)}
 .form-btn{width:100%;margin-top:6px}
+.bignum{display:block;font-size:clamp(30px,7vw,40px);font-weight:800;color:var(--ink);text-decoration:none;letter-spacing:.5px;margin:4px 0 14px;font-variant-numeric:tabular-nums}
+.callinfo{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:8px;font-size:15px;color:var(--muted)}
+.callinfo strong{color:var(--ink)}
 
 /* sections */
 section{padding:64px 0}
@@ -196,7 +198,7 @@ footer .cols{display:grid;gap:24px}
 footer h3{color:#fff;font-size:16px;margin:0 0 8px}
 
 /* sticky mobile bar */
-.mbar{position:fixed;bottom:0;left:0;right:0;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:10px 12px;background:#fff;border-top:1px solid var(--line);z-index:30}
+.mbar{position:fixed;bottom:0;left:0;right:0;display:grid;grid-template-columns:1fr;gap:8px;padding:10px 12px;background:#fff;border-top:1px solid var(--line);z-index:30}
 .mbar .btn{padding:12px;font-size:16px}
 
 @media(min-width:720px){
@@ -231,7 +233,7 @@ footer h3{color:#fff;font-size:16px;margin:0 0 8px}
       <a href="#faq">Vragen</a>
     </nav>
     <!-- TODO: echt GSM-nummer -->
-    <a class="btn btn-main top-call" href="tel:+32000000000">Bel nu</a>
+    <a class="btn btn-main top-call" href="tel:+3233756737">Bel nu</a>
   </div>
 </header>
 
@@ -245,60 +247,27 @@ footer h3{color:#fff;font-size:16px;margin:0 0 8px}
       <h1>Vloerder of tegelzetter nodig? Wij leggen uw tegels strak, proper en op tijd</h1>
       <p class="lead">Vloertegels, wandtegels of een volledige badkamer betegelen: één vakman van uitbraak tot voegwerk. Gratis opmeting en een vaste prijs, zonder verrassingen.</p>
       <ul class="checks">
-        <li>Gratis offerte binnen 24 uur</li>
+        <li>Gratis offerte, bel en we plannen meteen in</li>
         <li>Vaste prijs per m², vooraf afgesproken</li>
         <li>Vaak 6% btw bij renovatie</li>
         <li>Snel ingepland, ook voor kleine klussen</li>
       </ul>
       <div class="ctas">
-        <a class="btn btn-main" href="#offerte">Gratis offerte aanvragen</a>
-        <!-- TODO: WhatsApp-nummer zonder + en spaties -->
-        <a class="btn btn-wa" href="https://wa.me/32000000000?text=Hallo%2C%20ik%20wil%20graag%20een%20offerte%20voor%20tegelwerk.">WhatsApp ons</a>
+        <a class="btn btn-main" href="tel:+3233756737">Bel 03 375 67 37</a>
+        <a class="btn btn-ghost" href="#werkwijze">Zo werken we</a>
       </div>
     </div>
 
     <div class="card" id="offerte">
-      <h2>Gratis offerte aanvragen</h2>
-      <p class="sub">Vul het in, wij bellen u terug binnen 24 uur.</p>
-      <!-- TODO: vervang e-mailadres. FormSubmit is gratis; eerste inzending bevestigen via de mail die je krijgt. -->
-      <form action="https://formsubmit.co/info@vloerdernodig.com" method="POST" enctype="multipart/form-data">
-        <input type="hidden" name="_subject" value="Nieuwe offerte-aanvraag tegelwerk">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://vloerdernodig.com/bedankt.html">
-        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-        <div class="row two">
-          <div><label for="naam">Naam</label><input id="naam" name="naam" required autocomplete="name"></div>
-          <div><label for="tel">GSM-nummer</label><input id="tel" name="telefoon" type="tel" required autocomplete="tel"></div>
-        </div>
-        <div class="row two">
-          <div><label for="gemeente">Gemeente of postcode</label><input id="gemeente" name="gemeente" required autocomplete="postal-code"></div>
-          <div><label for="m2">Oppervlakte (m²)</label><input id="m2" name="oppervlakte_m2" inputmode="numeric" placeholder="bv. 35"></div>
-        </div>
-        <div class="row">
-          <div><label for="werk">Wat moet er gebeuren?</label>
-            <select id="werk" name="type_werk" required>
-              <option value="">Kies een klus</option>
-              <option>Vloertegels leggen</option>
-              <option>Wandtegels plaatsen</option>
-              <option>Badkamer betegelen</option>
-              <option>Keuken / spatwand</option>
-              <option>Grootformaat tegels</option>
-              <option>Terrastegels leggen</option>
-              <option>Oude tegels uitbreken + nieuwe leggen</option>
-              <option>Iets anders</option>
-            </select>
-          </div>
-        </div>
-        <div class="row">
-          <div><label for="info">Extra info (optioneel)</label><textarea id="info" name="bericht" placeholder="Formaat tegels, gewenste startdatum, ..."></textarea></div>
-        </div>
-        <div class="row">
-          <div><label for="foto">Foto van de ruimte (optioneel)</label><input id="foto" name="foto" type="file" accept="image/*"></div>
-        </div>
-        <button class="btn btn-main form-btn" type="submit">Verstuur aanvraag</button>
-        <p class="small">Gratis en vrijblijvend. Uw gegevens gebruiken we enkel om u te contacteren.</p>
-      </form>
+      <h2>Bel voor een gratis offerte</h2>
+      <p class="sub">Vertel ons wat er moet gebeuren. We plannen meteen een gratis opmeting in.</p>
+      <a class="bignum" href="tel:+3233756737">03 375 67 37</a>
+      <a class="btn btn-main form-btn" href="tel:+3233756737">Nu bellen</a>
+      <ul class="callinfo">
+        <li><strong>Maandag tot zaterdag</strong> 7u30 – 19u00</li>
+        <li><strong>Gratis opmeting</strong> en vaste prijs per m²</li>
+        <li><strong>Geen formulieren</strong>, u spreekt meteen een vloerder</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -370,7 +339,7 @@ footer h3{color:#fff;font-size:16px;margin:0 0 8px}
     <h2 class="sec">Zo werken we</h2>
     <p class="intro">Van aanvraag tot afgewerkte vloer in vier stappen.</p>
     <ol class="steps">
-      <li><h3>Aanvraag</h3><p>Vul het formulier in, bel of stuur een WhatsApp met een foto van de ruimte.</p></li>
+      <li><h3>Bellen</h3><p>Bel 03 375 67 37 en vertel wat er moet gebeuren: welke ruimte, hoeveel m² en welke tegels.</p></li>
       <li><h3>Gratis opmeting</h3><p>We komen langs, meten op en bekijken de ondergrond. U krijgt snel een duidelijke offerte met vaste prijs.</p></li>
       <li><h3>Plaatsing</h3><p>Op de afgesproken datum starten we. We werken proper, dekken af en houden u op de hoogte.</p></li>
       <li><h3>Oplevering</h3><p>Voegen, silicone en plinten afgewerkt, werf opgeruimd. U betaalt pas als u tevreden bent.</p></li>
@@ -386,7 +355,7 @@ footer h3{color:#fff;font-size:16px;margin:0 0 8px}
       <div><h3>Wat we beloven, doen we</h3><p>Afgesproken datum en afgesproken prijs. Geen meerwerk zonder uw akkoord.</p></div>
       <div><h3>Strak en vlak</h3><p>Nivelleersystemen, laser en de juiste lijm per tegel. Geen overstekende randen.</p></div>
       <div><h3>Proper werken</h3><p>We dekken af, ruimen dagelijks op en voeren het puin af.</p></div>
-      <div><h3>Snel bereikbaar</h3><p>Bellen, mailen of WhatsApp. U krijgt binnen 24 uur antwoord.</p></div>
+      <div><h3>Snel bereikbaar</h3><p>Bel ons en u spreekt meteen een vloerder. Geen wachtrij, geen formulieren.</p></div>
     </div>
   </div>
 </section>
@@ -422,10 +391,9 @@ footer h3{color:#fff;font-size:16px;margin:0 0 8px}
 <section class="cta-band">
   <div class="wrap">
     <h2 class="sec">Klaar voor een nieuwe vloer?</h2>
-    <p>Vraag vandaag nog een gratis offerte voor uw tegelwerk aan. Binnen 24 uur hoort u van ons.</p>
+    <p>Bel vandaag nog voor een gratis offerte voor uw tegelwerk.</p>
     <div class="ctas">
-      <a class="btn btn-ghost" href="#offerte">Offerte aanvragen</a>
-      <a class="btn btn-ghost" href="tel:+32000000000">Bel ons</a>
+      <a class="btn btn-ghost" href="tel:+3233756737">Bel 03 375 67 37</a>
     </div>
   </div>
 </section>
@@ -442,8 +410,7 @@ footer h3{color:#fff;font-size:16px;margin:0 0 8px}
     </div>
     <div>
       <h3>Contact</h3>
-      <p><a href="tel:+32000000000">+32 000 00 00 00</a><br>
-      <a href="mailto:info@vloerdernodig.com">info@vloerdernodig.com</a></p>
+      <p><a href="tel:+3233756737">03 375 67 37</a><br>Ma – za, 7u30 – 19u00</p>
     </div>
     <div>
       <h3>Tegelwerken</h3>
@@ -454,8 +421,7 @@ footer h3{color:#fff;font-size:16px;margin:0 0 8px}
 </footer>
 
 <div class="mbar">
-  <a class="btn btn-main" href="tel:+32000000000">Bel nu</a>
-  <a class="btn btn-wa" href="https://wa.me/32000000000">WhatsApp</a>
+  <a class="btn btn-main" href="tel:+3233756737">Bel nu: 03 375 67 37</a>
 </div>
 
 </body>
